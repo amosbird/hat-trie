@@ -66,6 +66,7 @@ public:
     using const_prefix_iterator = typename ht::const_prefix_iterator;
     
 public:
+    size_t bucket_count() { return 0; }
     explicit htrie_set(const Hash& hash = Hash()): m_ht(hash, ht::HASH_NODE_DEFAULT_MAX_LOAD_FACTOR,
                                                         ht::DEFAULT_BURST_THRESHOLD) 
     {
